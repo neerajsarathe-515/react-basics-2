@@ -11,3 +11,5 @@ This project is used to understand next level concepts  that will be helpful to 
 `CSS Modules`: Learning to integrate styling to a component.
 
 `Listing`: Creating multiple similar tags dynamically using arrays
+
+`Props Children`: Added more components like Card.js and Layout.js for styling that helps to perform our own styling for nested components.
