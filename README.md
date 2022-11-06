@@ -4,5 +4,10 @@ This project is used to understand next level concepts  that will be helpful to 
 
 ### Concepts Used
 
+`Routing` : For Providing path to specific component
 
-### `Route`
+`Navigation`: For providing the URL paths to a specific tags. For example Navigation Bar.
+
+`CSS Modules`: Learning to integrate styling to a component.
+
+`Listing`: Creating multiple similar tags dynamically using arrays
