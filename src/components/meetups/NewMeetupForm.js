@@ -1,17 +1,27 @@
 import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
-function NewMeetupForm(){
+import {useRef} from "react";
+function NewMeetupForm(props){
+    const enteredFormData = useRef();
 
-    function submitHandler(){
+    function submitHandler(event){
+        event.preventDefault();
 
+        const meetupData = {
+            title : enteredFormData.current['title'].value,
+            image : enteredFormData.current['image'].value,
+            address: enteredFormData.current['address'].value,
+            description: enteredFormData.current['description'].value
+        }
+        props.onAddMeetup(meetupData);
     }
 
     return (
         <Card>
-            <form className={classes.form} onSubmit={submitHandler}>
+            <form className={classes.form} onSubmit={submitHandler} ref={enteredFormData}>
                 <div className={classes.control}>
                     <label htmlFor="title">Meetup Title</label>
-                    <input type="text" name="title" required id="title"/>
+                    <input type="text" name="title" required id="title" />
                 </div>
                 <div className={classes.control}>
                     <label htmlFor="image">Meetup Image</label>
@@ -23,7 +33,7 @@ function NewMeetupForm(){
                 </div>
                 <div className={classes.control}>
                     <label htmlFor="description">Description</label>
-                    <textarea name="description" id="description" required rows="5"  />
+                    <textarea name="description" id="description" required rows="5" />
                 </div>
                 <div className={classes.actions}>
                     <button type="submit">Add Meetup</button>

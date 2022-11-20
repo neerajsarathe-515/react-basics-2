@@ -13,3 +13,5 @@ This project is used to understand next level concepts  that will be helpful to 
 `Listing`: Creating multiple similar tags dynamically using arrays
 
 `Props Children`: Added more components like Card.js and Layout.js for styling that helps to perform our own styling for nested components.
+
+`Form` : Added Form and sending request to firebase to work with sending data to the backend. We used fetch for a simple posting of data but still there are other methods where we can send HTTP requests to the backend.
