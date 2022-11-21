@@ -3,10 +3,9 @@ import MeetupItem from "./MeetupItem";
 import Card from "../ui/Card";
 
 function MeetupList(props) {
-    console.log(props.meetups)
     return (
         <ul className={classes.list}>
-            { props.meetups.map(meetup => (
+            { props.meetups.map((meetup) => (
                 <Card>
                     <MeetupItem
                         key={meetup.id}
